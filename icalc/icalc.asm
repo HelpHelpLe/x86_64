@@ -104,7 +104,7 @@ main:
     ; 乘法
     mov     rax,        [number1]
     ; 有符号数乘法
-    imul    qword       [number2]       ; 将number2与rax相乘，结果保存在rax中
+    imul    qword       [number2]       ; 将number2与rax相乘，结果的低64位保存在rax中，高64位保存在rdx中
     mov     [resulti],  rax
     ; 显示乘法结果
     mov     rdi,    fmtint

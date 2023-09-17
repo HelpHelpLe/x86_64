@@ -142,7 +142,7 @@
    104                                      ; 乘法
    105 000001C4 488B0425[00000000]          mov     rax,        [number1]
    106                                      ; 有符号数乘法
-   107 000001CC 48F72C25[08000000]          imul    qword       [number2]       ; 将number2与rax相乘，结果保存在rax中
+   107 000001CC 48F72C25[08000000]          imul    qword       [number2]       ; 将number2与rax相乘，结果的低64位保存在rax中，高64位保存在rdx中
    108 000001D4 48890425[00000000]          mov     [resulti],  rax
    109                                      ; 显示乘法结果
    110 000001DC 48BF-                       mov     rdi,    fmtint

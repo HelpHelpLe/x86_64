@@ -103,7 +103,7 @@ main:
     call    printf
     ; 乘法
     mov     rax,        [number1]
-    ; 立即数乘法
+    ; 有符号数乘法
     imul    qword       [number2]       ; 将number2与rax相乘，结果保存在rax中
     mov     [resulti],  rax
     ; 显示乘法结果

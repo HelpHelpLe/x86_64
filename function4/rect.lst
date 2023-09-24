@@ -1,0 +1,33 @@
+     1                                  ; rect.asm
+     2                                  ; ====================================================
+     3                                  section .data
+     4                                  section .bss
+     5                                  section .text
+     6                                  ; ====================================================
+     7                                  global  r_area
+     8                                  r_area:
+     9                                      section .text
+    10 00000000 55                              push    rbp
+    11 00000001 4889E5                          mov     rbp,    rsp
+    12                                      
+    13 00000004 4889F0                          mov     rax,    rsi
+    14 00000007 480FAFC7                        imul    rax,    rdi
+    15                                          
+    16 0000000B 4889EC                          mov     rsp,    rbp
+    17 0000000E 5D                              pop     rbp
+    18 0000000F C3                              ret
+    19                                  ; ====================================================
+    20                                  global r_circum
+    21                                  r_circum:
+    22                                      section .text
+    23 00000010 55                              push    rbp
+    24 00000011 4889E5                          mov     rbp,    rsp
+    25                                  
+    26 00000014 4889F0                          mov     rax,    rsi
+    27 00000017 4801F8                          add     rax,    rdi
+    28 0000001A 4801C0                          add     rax,    rax
+    29                                  
+    30 0000001D 4889EC                          mov     rsp,    rbp
+    31 00000020 5D                              pop     rbp
+    32 00000021 C3                              ret
+    33                                  ; ====================================================
